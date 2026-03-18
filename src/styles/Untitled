@@ -1,0 +1,20 @@
+[data-highlight-marker-reveal]{
+  visibility: hidden;
+}
+
+.wf-design-mode [data-highlight-marker-reveal]{
+  visibility: visible;  
+}
+
+[data-highlight-marker-reveal] .highlight-marker-line{
+  width: auto;
+  display: inline-block !important;
+  margin: -0.055em 0px;
+}
+
+.highlight-marker-bar{
+  position: absolute;
+  inset: -0.055em 0px;
+  z-index: 1;
+  pointer-events: none;
+}

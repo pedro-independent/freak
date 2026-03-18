@@ -1,0 +1,43 @@
+/* Custom Cursor */
+body:has( a:hover) .cursor,
+body:has( button:hover) .cursor,
+body:has( [data-cursor]:hover) .cursor{
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255, 76, 36, 0.3);
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+}
+
+/* Highlight Marker Text Reveal */
+[data-highlight-marker-reveal]{
+    visibility: hidden;
+  }
+  
+  .wf-design-mode [data-highlight-marker-reveal]{
+    visibility: visible;  
+  }
+  
+  [data-highlight-marker-reveal] .highlight-marker-line{
+    width: auto;
+    display: inline-block !important;
+    margin: -0.055em 0px;
+  }
+  
+  .highlight-marker-bar{
+    position: absolute;
+    inset: -0.055em 0px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+/* Cursor "default" */
+body,
+body :is([data-cursor="default"], [data-cursor="default"] *),
+body * {
+  cursor: url("https://cdn.prod.website-files.com/69b9d38761f710422734785f/69b9e41898c0a5bc58f6ec46_b49671b0579feb77745c207ed8648076_cursor.svg") 2 0, auto !important;
+}
